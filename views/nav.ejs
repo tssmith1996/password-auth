@@ -1,0 +1,30 @@
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-light p-4">
+            <h4 class="text-dark">Menu</h4>
+                <a href="/" class="nav-link text-dark">Home</a>
+                <a href="/about-us" class="nav-link text-dark">About Us</a>
+                <a href="/news" class="nav-link text-dark">News</a>
+                <a href="/photography" class="nav-link text-dark">Photography</a>
+                <% if (isAuthenticated) { %>
+                    <a href="/user-details" class="nav-link text-dark">User Details</a>
+                    <a href="/logout" class="nav-link text-dark">Logout</a>
+                  <% } else { %>
+                    <a href="/login-page" class="nav-link text-dark">Log In</a>
+                    <a href="/register-page" class="nav-link text-dark">Register</a>
+                  <% } %>
+                
+        </div>
+    </div>
+        <div>
+            <nav class="navbar navbar-light">
+                <button class="navbar-toggler text-left d-inline" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <a class="navbar-brand d-inline navbar-left" href="#">
+                    <img class="d-inline navbar-left" src="content/logos/Brown Rectangle Photography Logo sm.png" alt="" >
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>

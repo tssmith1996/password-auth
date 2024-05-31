@@ -1,0 +1,26 @@
+<%- include('header'); -%>
+
+<%- include('nav'); -%>
+
+<header>
+    <div class="container-fluid bg-info-subtle mb-4">
+        <div class="col-sm-8 mx-auto text-center py-2">
+            <h1 class="display-4">Moreland Photography Studio</h1>
+            <p class="lead ">Hit an error....</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h1>
+            <%= message %>
+        </h1>
+        <h2>
+            <%= error.status %>
+        </h2>
+        <pre><%= error.stack %></pre>
+    </div>
+</main>
+
+<%- include('footer'); -%>

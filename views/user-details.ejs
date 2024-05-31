@@ -1,0 +1,51 @@
+<%- include('header'); -%>
+
+
+    <%- include('nav'); -%>
+
+
+
+            <main>
+                <div class="container justify-content">
+                    <h3><%= title %></h3>
+                    <p>On this page you can view the user details associated with your account. This page requires the user to be authenticated, and returns the user details via an SQL query in index.js filtered to the session's userId value. It also demonstrates the use of a hashed password to ensure passwords remain secure on the site database.</p>
+
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>ID</th>
+                          <th>Email Address</th>
+                          <th>Hashed Password</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% for (let i=0; i < data.length; i++) { %>
+                          <tr>
+                            <td class="text-wrap"><%= data[i].id %></td>
+                            <td class="text-wrap"><%= data[i].email %></td>
+                            <td class="text-wrap"><%= data[i].hashedPassword %></td>
+                            <td class="text-wrap"><%= data[i].firstName %></td>
+                            <td class="text-wrap"><%= data[i].lastName %></td>
+                          </tr>
+                        <% } %>
+                      </tbody>
+                    </table>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-center">
+                        <a href="/account-changes-page">Change Account Details</a>
+                      </div>
+                    </div>
+
+                    
+                
+                </div>
+                
+              </main>
+
+
+
+        
+    
+    <%- include('footer'); -%>

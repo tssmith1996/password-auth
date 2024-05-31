@@ -1,0 +1,26 @@
+<%- include('header'); -%>
+
+<%- include('nav'); -%>
+
+<header>
+    <div class="container-fluid bg-info-subtle mb-4">
+        <div class="col-sm-8 mx-auto text-center py-2">
+            <h1 class="display-4">Moreland Photography Studio</h1>
+            <p class="lead ">Can't find that resource....</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h1>
+            <%= message %>
+        </h1>
+        <p>
+            Failed to find the resource you are looking for:
+        </p>
+        <pre><%= url %></pre>
+    </div>
+</main>
+
+<%- include('footer'); -%>
